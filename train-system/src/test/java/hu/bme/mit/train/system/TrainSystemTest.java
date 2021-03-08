@@ -51,7 +51,7 @@ public class TrainSystemTest {
 		
 		controller.pressEmergencyButton();
 		controller.followSpeed();
-		Assert.assertEquals(-23, controller.getReferenceSpeed());
+		Assert.assertEquals(0, controller.getReferenceSpeed());
 		
 		controller.pressEmergencyButton();
 		controller.followSpeed();

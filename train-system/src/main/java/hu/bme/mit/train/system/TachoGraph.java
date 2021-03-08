@@ -8,7 +8,7 @@ import com.google.common.collect.Table;
 public class TachoGraph {
 	
 	//Table containing data: Date, Joystick position, Reference speed
-	Table<Date, Integer, Integer> tachoTable;
+	private Table<Date, Integer, Integer> tachoTable;
 	
 	public TachoGraph() {
 		tachoTable = HashBasedTable.create();
