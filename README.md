@@ -52,4 +52,4 @@ The figure below illustrates this behavior using an example.
 * **Student Name:** Berczelly Attila
 * **NEPTUN ID:** AQK6KX
 
-BME VIK 2021 - Systems Engineering Laboratory 
+BME VIK 2021 Spring - Systems Engineering Laboratory 
