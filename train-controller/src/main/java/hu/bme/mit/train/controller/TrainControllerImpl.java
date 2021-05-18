@@ -8,6 +8,13 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private boolean emergencyBreaking = false;
+	
+	public TrainControllerImpl() {
+		TrainSpeedUpdater updater = new TrainSpeedUpdater(this);
+		
+		Thread updateThread = new Thread(updater);
+		updateThread.start();
+	}
 
 	@Override
 	public void followSpeed() {
