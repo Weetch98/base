@@ -11,7 +11,7 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private boolean emergencyBreaking = false;
-	private Timer t = new Timer(true);
+	private Timer updateTimer = new Timer(true);
 	TimerTask task = new TimerTask() {
 
 		@Override
@@ -22,7 +22,7 @@ public class TrainControllerImpl implements TrainController {
 	};
 	
 	public TrainControllerImpl() {
-		t.schedule(task, 0, 1000L);
+		updateTimer.schedule(task, 0, 1000L);
 	}
 	
 	@Override
