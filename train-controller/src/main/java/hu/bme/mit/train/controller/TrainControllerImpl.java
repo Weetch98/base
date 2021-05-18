@@ -1,5 +1,8 @@
 package hu.bme.mit.train.controller;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
@@ -8,7 +11,20 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private boolean emergencyBreaking = false;
+	private Timer t = new Timer(true);
+	TimerTask task = new TimerTask() {
 
+		@Override
+		public void run() {
+			followSpeed();
+		}
+		
+	};
+	
+	public TrainControllerImpl() {
+		t.schedule(task, 0, 1000L);
+	}
+	
 	@Override
 	public void followSpeed() {
 		if (emergencyBreaking) {
