@@ -20,7 +20,7 @@ public class TachoGraph {
 	
 	public void addData(int joystickPosition, int referenceSpeed) {
 		long currentTime = System.currentTimeMillis();
-		Date newDate = new Date(currentTime);
+		var newDate = new Date(currentTime);
 		tachoTable.put(newDate, joystickPosition, referenceSpeed);
 		
 	}
